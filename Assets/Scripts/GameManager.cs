@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         Player1Score++;
         player1Text.GetComponent<TextMeshProUGUI>().text = Player1Score.ToString();
-        if (Player1Score % 11 == 0 && Player1Score > Player2Score)
+        if (Player1Score % 3 == 0 && Player1Score > Player2Score)
         {
             winner.text = "Player 1 has Won!";
             Debug.Log("Player 1 has Won!");
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     {
         Player2Score++;
         player2Text.GetComponent<TextMeshProUGUI>().text = Player2Score.ToString();
-        if (Player2Score % 11 == 0 && Player2Score > Player1Score)
+        if (Player2Score % 3 == 0 && Player2Score > Player1Score)
         {
             winner.text = "Player 2 has Won!";
             Debug.Log("Player 2 has Won!");
